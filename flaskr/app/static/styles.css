@@ -1,6 +1,12 @@
-body{
-    font-family: cursive;
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing:border-box;
+    box-sizing: border-box;
 }
+
+
 .profile-thumbnail {
     position: absolute;
 }
@@ -8,11 +14,18 @@ body{
     min-height: 260px;
     margin-left: 280px;
 }
+div.post-tabs {
+    margin-top: 16px;
+}
 ul.posts {
     list-style-type: none;
     padding: 0px;
     margin: 16px 0px 0px 0px;
     border-top: 1px solid #e0e0e0;
+}
+div.post-tabs ul.posts {
+    margin: 0px;
+    border-top: none;
 }
 ul.posts li.post {
     padding: 8px;
@@ -36,6 +49,38 @@ div.post-content {
 }
 div.post-footer {
     text-align: right;
+}
+ul.comments {
+    list-style-type: none;
+    padding: 0px;
+    margin: 16px 0px 0px 0px;
+}
+ul.comments li.comment {
+    margin-left: 32px;
+    padding: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+ul.comments li.comment:nth-child(1) {
+    border-top: 1px solid #e0e0e0;
+}
+ul.comments li.comment:hover {
+    background-color: #f0f0f0;
+}
+div.comment-date {
+    float: right;
+}
+div.comment-author {
+    font-weight: bold;
+}
+div.comment-thumbnail {
+    position: absolute;
+}
+div.comment-content {
+    margin-left: 48px;
+    min-height: 48px;
+}
+div.comment-form {
+    margin: 16px 0px 16px 32px;
 }
 div.pagination {
     width: 100%;
@@ -66,4 +111,19 @@ div.flask-pagedown-preview h3 {
 .post-body h3 {
     font-size: 120%;
 }
+.table.followers tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+div.left{
+    float: left;
 
+}
+div.right{
+    margin-left: 55px;
+}
+div.intro{
+     display: flex;
+    flex-wrap: wrap;
+}
+h1{margin-top: 5px;
+    margin-bottom: 5px;}

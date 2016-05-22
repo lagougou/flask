@@ -1,5 +1,5 @@
 from ..models import Post,Permission
-from ..import db,auth
+from .. import db
 from flask import g,request,jsonify,current_app,url_for
 from . import api
 from .decorators import permisson_required

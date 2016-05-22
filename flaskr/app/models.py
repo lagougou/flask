@@ -148,16 +148,16 @@ class User(db.Model,UserMixin):
                 db.session.rollback()
 
     def unfollow(self,user):
-        f=self.followed.filter_by(followed_id=user.id).first()
+        f=self.followers.filter_by(follower_id=user.id).first()
         if f:
-            Follow.query.filter_by(follwed_id=user.id).delete()
+            Follow.query.filter_by(follower_id=user.id).delete()
 
     def is_following(self,user):
-        return self.followed.filter_by(
-            followed_id=user.id).first() is not None
+        return self.followers.filter_by(
+            follower_id=user.id).first() is not None
 
     def is_followed_by(self,user):
-        return self.followers.filter_by(follower_id=user.id).first() is not None
+        return self.followed.filter_by(followed_id=user.id).first() is not None
 
     @property
     def followed_posts(self):
